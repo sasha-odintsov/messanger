@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { inputText } from '../../redux/actions';
+import { inputText, messageLoad } from '../../redux/actions';
 import { useState } from "react";
 import uniqid from 'uniqid';
 
@@ -10,11 +10,13 @@ const Input = () => {
         e.preventDefault();
         const id = uniqid();
         dispatch(inputText(message, id))
+        setTimeout(() => dispatch(messageLoad()), 2000)
     }
     return(
         <form onSubmit={handleSubmit}>
             <input type="text" value={message} onChange={(e) => setMessage(e.target.value)}/>
             <input type="submit" hidden/>
+            <input type="submit" value='Send'/>
         </form>
     )
 }
