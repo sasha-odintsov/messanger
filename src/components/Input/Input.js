@@ -9,7 +9,7 @@ const Input = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const id = uniqid();
-        dispatch(inputText(message, id))
+        dispatch(inputText(message, id, 'send'))
         setTimeout(() => dispatch(messageLoad()), 2000)
     }
     return(

@@ -1,7 +1,7 @@
-export function inputText(text, id) {
+export function inputText(text, id, type) {
     return {
         type: 'INPUT_TEXT',
-        payload: { text, id }
+        payload: { text, id, type }
     }
 }
 

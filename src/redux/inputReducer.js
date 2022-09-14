@@ -1,6 +1,5 @@
 const initialState = {
-    messages: [],
-    // answers: []
+    messages: []
 }
 
 const inputReducer = (state = initialState, action) => {
@@ -11,6 +10,7 @@ const inputReducer = (state = initialState, action) => {
                 ...state,
                 messages: [...state.messages, action.payload]
             }
+            
         case 'MESSAGE_LOAD':
             return {
                 ...state,
@@ -18,10 +18,6 @@ const inputReducer = (state = initialState, action) => {
                     text: action.data.value,
                     id: action.data.id
                 }]
-                // answers: [...state.answers, {
-                //     text: action.data.value,
-                //     id: action.data.id
-                // }]
             }
 
         case 'DELETE':

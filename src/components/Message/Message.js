@@ -1,16 +1,16 @@
 import { useDispatch } from "react-redux";
 import { messageDelete } from "../../redux/actions";
-import './Message.css'
+import './Message.scss';
 
-const Message = ({ data }) => {
+const Message = ({ data, style }) => {
     const { text, id } = data;
     const dispatch = useDispatch();
     const handleDelete = () => {
         dispatch(messageDelete(id))
     }
     return (
-        <div style={{ display: 'flex', alignItems: 'center' }} className='message'>
-            <p style={{marginRight: '10px'}} >
+        <div >
+            <p style={style} className='message'>
                 {text}
             </p>
             <div onClick={handleDelete} style={{ color: 'red', cursor: 'pointer'}}>x</div>
