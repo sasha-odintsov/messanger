@@ -1,9 +1,38 @@
+@import '../../tools.scss';
+
 .chat {
-    width: 500px; 
-    margin: 20px auto; 
-    border: 1px solid #ccc; 
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    background-color: $backgroundMain;
+    width: 100%;
+    position: relative;
+    min-height: 100vh;
+    
+    .chat__header {
+        background-color: $backgroundDarker;
+        display: flex;
+        align-items: center;
+        @include border(border-bottom);
+        padding: 10px 20px;
+
+        .chat__header_title {
+            font-size: 1.2rem;
+            padding: 0 20px;
+            margin: 0;
+            font-weight: normal;
+            color: $colorTitle;
+        }
+    }
+    .chat__content-wrap {
+        overflow: hidden;
+        height: calc(100vh - 150px);
+        overflow-y: auto;
+        
+        .chat__content {
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto; 
+            height: 100%;
+            width: 500px; 
+            padding: 20px;
+        }
+    }
 }

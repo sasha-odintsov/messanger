@@ -1,10 +1,22 @@
-.message {
-    background-color: #f0f0f0;
-    margin: 10px;
-    max-width: 70%;
-    padding: 10px;
-    border-radius: 10px;
-}
-.message-send {
-    background-color: #9fb0ff
+@import '../../tools';
+
+.message__wrap {
+    max-width: 80%;
+    display: flex;
+    
+    .message {
+        background-color: #eee;
+        color: $colorTitle;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    .message-send {
+        background-color: $colorContrast;
+        color: #fff;
+    }
+    .message__btn {
+        color: #d14141;
+        cursor: pointer;
+    }
 }

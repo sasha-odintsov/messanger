@@ -1,0 +1,14 @@
+@import '../../tools';
+
+.title-page {
+    background: linear-gradient($colorContrast, #eee);
+    min-height: 100vh; 
+    width: 100%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+
+    .title-page__heading {
+        color: #fff;
+    }
+}

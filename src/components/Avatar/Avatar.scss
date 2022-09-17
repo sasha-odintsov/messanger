@@ -1,0 +1,11 @@
+.avatar-wrap {
+    width: 80px;
+    // min-width: 80px;
+    display: flex;
+    align-items: center;
+
+    .avatar {
+        width: 100%;
+        border-radius: 50%;
+    }
+}

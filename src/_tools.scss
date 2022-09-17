@@ -1,0 +1,9 @@
+$backgroundMain: #fafafa;
+$backgroundDarker: #f5f5f5;
+$colorContrast: #9fb0ff;
+$colorTitle: #6e6e6e;
+$colorLighter: #b6b6b6;
+
+@mixin border($property) {
+    #{$property}: 1px solid #eee;
+}

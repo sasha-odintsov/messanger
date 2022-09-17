@@ -1,6 +1,12 @@
+import './MainPage.scss';
+
 const MainPage = () => {
     return (
-        <div style={{ background: '#fafafa', minHeight: '100vh'}}>MainPage</div>
+        <div className='title-page'>
+            <h2 className='title-page__heading'>
+                Welcome
+            </h2>
+        </div>
     )
 }
 

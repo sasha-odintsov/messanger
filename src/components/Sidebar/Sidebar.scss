@@ -1,0 +1,53 @@
+@import '../../tools.scss';
+
+.sidebar {
+    background-color: #fff;
+    min-width: 400px;
+    max-width: 400px;
+    overflow: hidden;
+    @include border(border-right);
+    min-height: 100vh;
+
+    .sidebar__title {
+        text-decoration: none;
+        color:  $colorContrast;
+        margin: 40px 10px;
+        display: block;
+        font-size: 1.6rem;
+    }
+    .sidebar__navigation_list {
+        padding: 0;
+        margin: 0;
+
+        .sidebar__navigation_item {
+            list-style: none;
+            padding: 10px;
+            @include border(border-bottom);
+
+            .sidebar__navigation_link {
+                text-decoration: none;
+                display: flex;
+
+                .navigation_link-dialog-wrap {
+                    padding: 10px;
+                    overflow: hidden;
+
+                    .navigation_link-dialog-title {
+                        display: flex;
+                        justify-content: space-between;
+                        color: $colorTitle;
+                        margin-bottom: 10px;
+                        font-size: 1.2rem;
+                    }
+                    .navigation_link-dialog-subtitle {
+                        color: $colorLighter;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
