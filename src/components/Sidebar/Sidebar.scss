@@ -2,11 +2,11 @@
 
 .sidebar {
     background-color: #fff;
-    min-width: 400px;
-    max-width: 400px;
+    width: 400px;
     overflow: hidden;
     @include border(border-right);
     min-height: 100vh;
+    flex-shrink: 0;
 
     .sidebar__title {
         text-decoration: none;
@@ -15,6 +15,15 @@
         display: block;
         font-size: 1.6rem;
         font-weight: 500;
+    }
+    .sidebar__logo-wrap {
+        width: 30px;
+        margin: 30px auto;
+        display: none;
+
+        .sidebar__logo {
+            width: 100%;
+        }
     }
     .sidebar__navigation_list {
         padding: 0;
@@ -37,14 +46,13 @@
                     .navigation_link-dialog-title {
                         display: flex;
                         justify-content: space-between;
-                        align-items: flex-end;
+                        align-items: center;
                         margin-bottom: 5px;
                         
                         .link-dialog-title_name {
                             color: $colorTitle;
                             font-weight: 600;
                             font-size: 1.2rem;
-                            
                         }
                         .link-dialog-title_time {
                             color: $colorLighter;
@@ -59,6 +67,23 @@
                     }
                 }
             }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .sidebar {
+        width: 300px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: auto;
+        .sidebar__title, .navigation_link-dialog-wrap {
+            display: none;
+        }
+        .sidebar__logo-wrap {
+            display: block;
         }
     }
 }

@@ -1,4 +1,5 @@
 import './Chat.scss';
+import '../../_tools.scss';
 import { useSelector } from "react-redux";
 import { useRef, useEffect } from 'react';
 import Input from "../Input/Input";
@@ -15,14 +16,14 @@ const Chat = () => {
     
     return(
         <div className='chat'>
-            <header className='chat__header'>
+            <header className='chat__header wrapper-content'>
                 <Avatar style={{ width: '50px' }}/>
                 <h2 className="chat__header_title">
                     Chuck Norris
                 </h2>
             </header>
             <div className='chat__content-wrap'>
-                <div className="chat__content">
+                <div className="chat__content wrapper-content">
                     {!!message.length && message.map((message) => {
                         return (
                             <Message 

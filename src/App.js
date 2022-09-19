@@ -6,7 +6,7 @@ import Chat from './components/Chat/Chat';
 
 function App() {
   return (
-    <div className="app">
+    <div className="wrapper">
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<MainPage />}/>

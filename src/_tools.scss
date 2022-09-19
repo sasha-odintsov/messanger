@@ -7,3 +7,24 @@ $colorLighter: #b6b6b6;
 @mixin border($property) {
     #{$property}: 1px solid #eee;
 }
+
+.wrapper-content {
+    width: 500px; 
+    padding: 0 20px;
+}
+
+@media screen and (max-width: 992px) {
+    .wrapper-content {
+        width: 400px; 
+    }
+}
+@media screen and (max-width: 768px) {
+    .wrapper-content {
+        width: 100%; 
+    }
+}
+@media screen and (max-width: 576px) {
+    .wrapper-content {
+        padding: 0 10px;
+    }
+}

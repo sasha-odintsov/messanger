@@ -1,4 +1,3 @@
-
 export function inputText(text, id, date, type) {
     return {
         type: 'INPUT_TEXT',

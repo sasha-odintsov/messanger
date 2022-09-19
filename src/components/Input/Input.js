@@ -1,4 +1,5 @@
 import './Input.scss';
+import '../../_tools.scss';
 import { useDispatch } from "react-redux";
 import { inputText, messageLoad } from '../../redux/actions';
 import { useState } from "react";
@@ -17,7 +18,7 @@ const Input = () => {
     }
     return(
         <form onSubmit={handleSubmit} className='chat__form'>
-            <div className="chat__inputs-wrap">
+            <div className="chat__inputs-wrap wrapper-content">
                 <input 
                 type="text" 
                 value={message} 

@@ -23,10 +23,15 @@
             color: $colorLighter;
         }
     }
-    
     .message__btn {
         color: #d14141;
         cursor: pointer;
         height: fit-content;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .message__wrap {
+        max-width: 90%;
     }
 }
