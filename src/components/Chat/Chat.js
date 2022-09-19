@@ -1,5 +1,6 @@
 import './Chat.scss';
 import { useSelector } from "react-redux";
+import { useRef, useEffect } from 'react';
 import Input from "../Input/Input";
 import Message from "../Message/Message";
 import Avatar from '../Avatar/Avatar';
@@ -7,6 +8,11 @@ import Avatar from '../Avatar/Avatar';
 
 const Chat = () => {
     const message = useSelector((state) => state.inputReducer.messages);
+    const scroll = useRef(null);
+    useEffect(() => {
+        scroll.current.scrollIntoView();
+    }, [message]);
+    
     return(
         <div className='chat'>
             <header className='chat__header'>
@@ -29,7 +35,8 @@ const Chat = () => {
                             />
                         )
                     })}
-                </div>
+                    <span ref={scroll}></span>
+                </div >
             </div>
             <Input />
         </div>

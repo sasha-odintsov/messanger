@@ -14,6 +14,7 @@
         margin: 40px 10px;
         display: block;
         font-size: 1.6rem;
+        font-weight: 500;
     }
     .sidebar__navigation_list {
         padding: 0;
@@ -31,13 +32,23 @@
                 .navigation_link-dialog-wrap {
                     padding: 10px;
                     overflow: hidden;
+                    width: 100%;
 
                     .navigation_link-dialog-title {
                         display: flex;
                         justify-content: space-between;
-                        color: $colorTitle;
-                        margin-bottom: 10px;
-                        font-size: 1.2rem;
+                        align-items: flex-end;
+                        margin-bottom: 5px;
+                        
+                        .link-dialog-title_name {
+                            color: $colorTitle;
+                            font-weight: 600;
+                            font-size: 1.2rem;
+                            
+                        }
+                        .link-dialog-title_time {
+                            color: $colorLighter;
+                        }
                     }
                     .navigation_link-dialog-subtitle {
                         color: $colorLighter;

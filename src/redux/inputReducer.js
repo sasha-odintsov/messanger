@@ -16,7 +16,8 @@ const inputReducer = (state = initialState, action) => {
                 ...state,
                 messages: [...state.messages, {
                     text: action.data.value,
-                    id: action.data.id
+                    id: action.data.id,
+                    date: action.date
                 }]
             }
 

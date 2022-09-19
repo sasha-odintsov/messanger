@@ -1,12 +1,15 @@
 import './Sidebar.scss';
 import { Link } from "react-router-dom";
 import Avatar from '../Avatar/Avatar';
+import { useSelector } from "react-redux";
 // import Chuck from '../../images/ChuckNorris.jpg'
 
 const Sidebar = () => {
+    const messages = useSelector((state) => state.inputReducer.messages);
+    const lastMessage = messages.length ? messages[messages.length - 1] : '';
     return (
         <div className="sidebar">
-            <Link to="/" className="sidebar__title ">Messanger</Link>
+            <Link to="/" className="sidebar__title">Messanger</Link>
             <nav className="sidebar__navigation">
                 <ul className="sidebar__navigation_list">
                     <li className="sidebar__navigation_item">
@@ -15,10 +18,10 @@ const Sidebar = () => {
                             <div className="navigation_link-dialog-wrap">
                                 <div className="navigation_link-dialog-title">
                                     <span className="link-dialog-title_name">Chuck Norris</span>
-                                    <span className="link-dialog-title_time">14.09.22 14:40</span>
+                                    <span className="link-dialog-title_time">{lastMessage && lastMessage.date.slice(0, 10)}</span>
                                 </div>
                                 <p className="navigation_link-dialog-subtitle">
-                                    Fighting bulls see a red cape and charge towards it
+                                    {lastMessage.text}
                                 </p>
                             </div>
                         </Link>

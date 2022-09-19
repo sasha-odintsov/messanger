@@ -10,5 +10,17 @@
 
     .title-page__heading {
         color: #fff;
+        font-size: 1.6rem;
+        font-weight: bold;
+    }
+    .title-page__logo-wrap {
+        width: 1.7rem;
+        display: flex;
+        align-items: center;
+        margin: 0 10px;
+
+        .title-page__logo {
+            width: 100%;
+        } 
     }
 }

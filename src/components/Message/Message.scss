@@ -3,20 +3,30 @@
 .message__wrap {
     max-width: 80%;
     display: flex;
+
+    .message__secondary-wrap {
+        margin: 10px 5px;
+
+        .message {
+            background-color: #eee;
+            color: $colorTitle;
+            padding: 10px;
+            border-radius: 10px;
+            margin: 0;
+        }
+        .message-send {
+            background-color: $colorContrast;
+            color: #fff;
+        }
+        .message__date {
+            font-size: .9rem;
+            color: $colorLighter;
+        }
+    }
     
-    .message {
-        background-color: #eee;
-        color: $colorTitle;
-        margin: 10px;
-        padding: 10px;
-        border-radius: 10px;
-    }
-    .message-send {
-        background-color: $colorContrast;
-        color: #fff;
-    }
     .message__btn {
         color: #d14141;
         cursor: pointer;
+        height: fit-content;
     }
 }
