@@ -13,7 +13,7 @@ const ChatRoom = () => {
       {chats.map(chat => {
         return(
           <ChatHeader 
-            key={chat.title}
+            key={chat.id}
             title={chat.title}
             avatar={chat.avatar}
           />

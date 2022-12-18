@@ -19,7 +19,7 @@ const Sidebar = () => {
                     <li className="sidebar__navigation_item">
                         {chats.map(chat => {
                             return(
-                                <Link key={chat.title} to="/chat" className="sidebar__navigation_link">
+                                <Link key={chat.id} to={`/chat/${chat.id}`} className="sidebar__navigation_link">
                                     <Avatar avatar={chat.avatar}/>
                                     <div className="navigation_link-dialog-wrap">
                                         <div className="navigation_link-dialog-title">
