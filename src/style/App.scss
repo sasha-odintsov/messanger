@@ -1,0 +1,66 @@
+@import './tools.scss';
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+
+    body {
+        font-size: 1rem;
+        margin: 0;
+        font-family: 'Manrope', sans-serif;
+        scrollbar-width: thin;  
+
+        ::-webkit-scrollbar {
+            width: 6px; 
+        }  
+        ::-webkit-scrollbar-thumb {
+            background: rgba(#000, .1);
+            border-radius: 5px;
+        }
+    }
+}
+
+.wrapper {
+    display: flex;
+
+    .chat {
+        background-color: $backgroundMain;
+        width: 100%;
+        position: relative;
+        min-height: 100vh;
+        
+        .chat__header {
+            background-color: $backgroundDarker;
+            display: flex;
+            align-items: center;
+            @include border(border-bottom);
+            padding-top: 10px;
+            padding-bottom: 10px;
+            width: 100%;
+    
+            .chat__header_title {
+                font-size: 1.2rem;
+                padding: 0 20px;
+                margin: 0;
+                font-weight: 600;
+                color: $colorTitle;
+            }
+        }
+        .chat__content-wrap {
+            overflow: hidden;
+            height: calc(100vh - 152px);
+            overflow-y: auto;
+            
+            .chat__content {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                margin: 0 auto;
+                padding-top: 5px;
+            }
+        }
+    }
+}

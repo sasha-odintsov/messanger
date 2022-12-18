@@ -2,7 +2,8 @@ import './Sidebar.scss';
 import { Link } from "react-router-dom";
 import Avatar from '../Avatar/Avatar';
 import { useSelector } from "react-redux";
-import logo from '../../images/send.png'
+import logo from '../../images/send.png';
+import { chats } from '../../data/data';
 
 const Sidebar = () => {
     const messages = useSelector((state) => state.inputReducer.messages);
@@ -16,18 +17,22 @@ const Sidebar = () => {
             <nav className="sidebar__navigation">
                 <ul className="sidebar__navigation_list">
                     <li className="sidebar__navigation_item">
-                        <Link to="/chat" className="sidebar__navigation_link">
-                            <Avatar />
-                            <div className="navigation_link-dialog-wrap">
-                                <div className="navigation_link-dialog-title">
-                                    <span className="link-dialog-title_name">Chuck Norris</span>
-                                    <span className="link-dialog-title_time">{lastMessage && lastMessage.date.slice(0, 10)}</span>
-                                </div>
-                                <p className="navigation_link-dialog-subtitle">
-                                    {lastMessage.text}
-                                </p>
-                            </div>
-                        </Link>
+                        {chats.map(chat => {
+                            return(
+                                <Link key={chat.title} to="/chat" className="sidebar__navigation_link">
+                                    <Avatar avatar={chat.avatar}/>
+                                    <div className="navigation_link-dialog-wrap">
+                                        <div className="navigation_link-dialog-title">
+                                            <span className="link-dialog-title_name">{chat.title}</span>
+                                            <span className="link-dialog-title_time">{lastMessage && lastMessage.date.slice(0, 10)}</span>
+                                        </div>
+                                        <p className="navigation_link-dialog-subtitle">
+                                            {lastMessage.text}
+                                        </p>
+                                    </div>
+                                </Link>
+                            )
+                        })}
                     </li >
                 </ul>
             </nav>

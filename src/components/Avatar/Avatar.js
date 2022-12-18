@@ -1,10 +1,9 @@
-import './Avatar.scss'
-import Chuck from '../../images/ChuckNorris.jpg'
+import './Avatar.scss';
 
-const Avatar = ({ style }) => {
+const Avatar = ({ style, avatar }) => {
     return (
         <div className="avatar-wrap" style={style}>
-            <img src={Chuck} alt="avatar" className="avatar"/>
+            <img src={avatar} alt="avatar" className="avatar"/>
         </div>
     )
 }

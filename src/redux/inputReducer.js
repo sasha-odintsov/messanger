@@ -1,4 +1,13 @@
+// import Chuck from '../images/ChuckNorris.jpg';
+
 const initialState = {
+    // chats: [
+    //     {
+    //      title: 'Chuck Norris',
+    //      avatar: Chuck,
+    //      messages: []
+    //     },
+    // ],
     messages: []
 }
 

@@ -1,8 +1,8 @@
-import './App.scss';
+import './style/App.scss';
 import { Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout/Layout.js';
 import MainPage from './components/MainPage/MainPage';
-import Chat from './components/Chat/Chat';
+import ChatRoom from './components/ChatRoom/ChatRoom';
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<MainPage />}/>
-          <Route path='chat' element={<Chat />}/>
+          <Route path='chat' element={<ChatRoom />}/>
         </Route>
       </Routes>
     </div>

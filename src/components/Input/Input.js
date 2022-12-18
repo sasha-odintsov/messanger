@@ -1,5 +1,4 @@
 import './Input.scss';
-import '../../_tools.scss';
 import { useDispatch } from "react-redux";
 import { inputText, messageLoad } from '../../redux/actions';
 import { useState } from "react";
